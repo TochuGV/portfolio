@@ -5,9 +5,9 @@ interface Props {
   className?: string;
 }
 
-export const Section = ({ id, title, children, className="py-20 px-6" }: Props) => {
+export const Section = ({ id, title, children, className="" }: Props) => {
   return (
-    <section id={id} className={className}>
+    <section id={id} className={`py-20 px-6 ${className}`}>
       <div className="max-w-6xl mx-auto">
         {title && (
           <h2 className="text-4xl font-bold mb-12 text-center text-blue-400">
