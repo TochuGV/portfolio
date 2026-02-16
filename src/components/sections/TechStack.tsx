@@ -1,5 +1,6 @@
 import { techStack } from "../../data/Portfolio"
 import { Section } from "../ui/Section"
+import { TechIcon } from "../shared/TechIcon"
 
 export const TechStack = () => {
   return (
@@ -10,7 +11,7 @@ export const TechStack = () => {
               key={category.name}
               className="bg-slate-900/80 rounded-xl p-6 border border-blue-900/30"
             >
-              <h3 className="text-xl font-bold mb-4 text-blue-300">
+              <h3 className="text-xl font-bold mb-4 text-blue-300 text-center">
                 {category.name}
               </h3>
               <div className="space-y-3">
@@ -19,18 +20,18 @@ export const TechStack = () => {
                     key={tech.name}
                     className="flex items-center gap-3 p-2 rounded-lg hover:bg-blue-900/20 transition-colors"
                   >
-                    <img 
-                      src={`https://skillicons.dev/icons?i=${tech.icon}`}
-                      alt={tech.name}
+                    <TechIcon
+                      name={tech.name}
+                      icon={tech.icon}
                       className="w-10 h-10"
                     />
-                    <span className="text-gray-300 font-semibold">{tech.name}</span>
+                    <span className="text-gray-300 font-semibold select-none">{tech.name}</span>
                   </div>
                 ))}
-              </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
+      </div>
     </Section>
   )
 }

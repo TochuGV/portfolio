@@ -1,12 +1,21 @@
-export interface TechItem {
-  name: string;
-  icon: string;
-}
+import type { Experience, TechCategory } from "../types";
 
-export interface TechCategory {
-  name: string;
-  technologies: TechItem[];
-}
+export const experience: Experience[] = [
+    {
+      id: 1,
+      position: "Full Stack Developer",
+      company: "Yoizen",
+      period: "Jan 2023 - Jul 2024",
+      description: "Desarrollo de aplicaciones web utilizando React y Node.js. Implementación de APIs RESTful y gestión de bases de datos."
+    },
+    {
+      id: 2,
+      position: "Backend Developer",
+      company: "Wirsolut",
+      period: "Oct 2022 - Dec 2022",
+      description: "Creación de interfaces de usuario responsivas. Optimización de rendimiento y experiencia de usuario."
+    },
+  ];
 
 export const techStack: TechCategory[] = [
   {
@@ -41,6 +50,7 @@ export const techStack: TechCategory[] = [
       { name: "MongoDB", icon: "mongodb" },
       { name: "PostgreSQL", icon: "postgres" }, // Hasta saber Supabase, se queda.
       //{ name: "Supabase", icon: "supabase" }, // Hasta que no la utilice, no se pone.
+      { name: "TypeORM", icon: "typeorm"}
     ],
   },
   {
