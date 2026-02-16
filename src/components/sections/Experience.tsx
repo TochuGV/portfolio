@@ -12,24 +12,33 @@ export const Experience = () => {
           {experience.map((exp) => (
             <TimelineItem key={exp.id}>
               <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 shadow-sm hover:border-blue-500/30 transition-colors duration-300">
-                
                 <h3 className="text-xl font-bold text-blue-300 mb-2">
                   {exp.position}
                 </h3>
 
-                <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mb-4">
-                  <div className="flex items-center gap-2">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:gap-4 mb-4">
+                  <a 
+                    href={exp.company.url} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className={`flex items-center w-fit gap-2 group ${exp.company.url ? 'cursor-pointer' : 'pointer-events-none'}`}
+                  >
                     {exp.company.logo && (
                       <BrandIcon
                         name={exp.company.name}
                         icon={exp.company.logo}
-                        className="w-6 h-6 rounded bg-slate-100 p-0.5 shadow-sm object-contain"
+                        className="w-6 h-6 rounded bg-slate-100 p-0.5 shadow-sm object-contain transition-all duration-300 group-hover:ring-2 group-hover:ring-blue-400/50 mr-2"
                       />
                     )}
-                    <h4 className="text-lg text-slate-400 font-medium">
+                    <h4 className="text-lg text-slate-400 font-medium transition-colors duration-300 group-hover:text-blue-300">
                       {exp.company.name}
+                      {exp.company.url && (
+                        <span className="inline-block max-w-0 opacity-0 group-hover:max-w-5 group-hover:opacity-100 group-hover:ml-2 transition-all duration-300 ease-in-out text-[10px] text-blue-300 overflow-hidden">
+                          ↗
+                        </span>
+                      )}
                     </h4>
-                  </div>
+                  </a>
 
                   <span className="hidden sm:block text-slate-600">•</span>
 
