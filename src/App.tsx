@@ -1,5 +1,6 @@
+import { TechStack } from "./components/sections";
+
 const App = () => {
-  // Datos de ejemplo - reemplaza con tus datos reales
   const projects = [
     {
       id: 1,
@@ -63,31 +64,6 @@ const App = () => {
       description: "Desarrollo de componentes reutilizables. Colaboración en proyectos ágiles con equipo multidisciplinario."
     }
   ];
-
-  const techStack = {
-    "Frontend": [
-      { name: "React", icon: "react" },
-      { name: "TypeScript", icon: "ts" },
-      { name: "Next.js", icon: "nextjs" },
-      { name: "Tailwind CSS", icon: "tailwind" }
-    ],
-    "Backend": [
-      { name: "Node.js", icon: "nodejs" },
-      { name: "Python", icon: "py" },
-      { name: "FastAPI", icon: "fastapi" },
-      { name: "Express", icon: "express" }
-    ],
-    "Bases de Datos": [
-      { name: "MongoDB", icon: "mongodb" },
-      { name: "PostgreSQL", icon: "postgres" },
-      { name: "MySQL", icon: "mysql" }
-    ],
-    "Herramientas": [
-      { name: "Git", icon: "git" },
-      { name: "Docker", icon: "docker" },
-      { name: "VSCode", icon: "vscode" }
-    ]
-  };
 
   return (
     <div className="bg-slate-950 text-gray-100 min-h-screen">
@@ -298,42 +274,8 @@ const App = () => {
           </div>
         </div>
       </section>
-
-      {/* Tech Stack Section */}
-      <section id="tech-stack" className="py-20 px-6">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center text-blue-400">
-            Tech Stack
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {Object.entries(techStack).map(([category, techs]) => (
-              <div
-                key={category}
-                className="bg-slate-900/80 rounded-xl p-6 border border-blue-900/30"
-              >
-                <h3 className="text-xl font-bold mb-4 text-blue-300">
-                  {category}
-                </h3>
-                <div className="space-y-3">
-                  {techs.map((tech, idx) => (
-                    <div
-                      key={idx}
-                      className="flex items-center gap-3 p-2 rounded-lg hover:bg-blue-900/20 transition-colors"
-                    >
-                      <img 
-                        src={`https://skillicons.dev/icons?i=${tech.icon}`}
-                        alt={tech.name}
-                        className="w-10 h-10"
-                      />
-                      <span className="text-gray-300">{tech.name}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      
+      <TechStack />
 
       {/* Contact Section */}
       <section id="contacto" className="py-20 px-6 bg-slate-900/50">
