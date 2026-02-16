@@ -4,17 +4,39 @@ export const experience: Experience[] = [
     {
       id: 1,
       position: "Full Stack Developer",
-      company: "Yoizen",
       period: "Jan 2023 - Jul 2024",
-      description: "Desarrollo y mantenimiento para ySocial, una plataforma omnicanal para la gestión de atención al cliente en redes sociales y canales digitales.",
+      company: {
+        name: "Yoizen",
+        url: "https://yoizen.com/",
+        logo: "/companies/yoizen.png"
+      }, 
+      details: {
+        summary: "Desarrollo y mantenimiento para ySocial, una plataforma omnicanal para la gestión de atención al cliente en redes sociales y canales digitales.",
+        achievements: [
+          "Implementación y mantenimiento de funcionalidades en C#, Angular y JavaScript.",
+          "Integración con SQL Server para el manejo de interacciones entre usuarios y agentes.",
+          "Optimización de la experiencia de usuario en canales como WhatsApp, Instagram y Facebook."
+        ]
+      },
       technologies: ["C#", "Angular", "JavaScript", "SQL Server", "jQuery", "Node.js"]
     },
     {
       id: 2,
       position: "Backend Developer",
-      company: "Wirsolut",
       period: "Oct 2022 - Dec 2022",
-      description: "Desarrollo de una API RESTful para WirTrack, una plataforma web diseñada para optimizar la gestión logística y la seguridad en el transporte de mercancías.",
+      company: {
+        name: "Wirsolut",
+        url: "https://wirsolut.com/",
+        logo: "/companies/wirsolut.png"
+      },
+      details: {
+        summary: "Desarrollo de una API RESTful para WirTrack, una plataforma web diseñada para optimizar la gestión logística y la seguridad en el transporte de mercancías.",
+        achievements: [
+          "Diseño y construcción de endpoints para el registro y consulta de rutas de viaje.",
+          "Validación de datos con Zod e integración con PostgreSQL mediante TypeORM.",
+          "Implementación de estándares de desarrollo Backend utilizando TypeScript, Node.js y Express."
+        ],
+      },
       technologies: ["TypeScript", "Node.js", "Express", "PostgreSQL", "TypeORM", "Zod", "Docker"]
     },
   ];

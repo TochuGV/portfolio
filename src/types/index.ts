@@ -8,11 +8,22 @@ export interface TechCategory {
   technologies: TechItem[];
 }
 
-export interface Experience {
+export interface Company {
+  name: string;
+  url?: string;
+  logo?: string;
+}
+
+export interface Details {
+  summary: string;
+  achievements: string[];
+}
+
+export interface Experience { // Revisar si agregar 'mode' (Full-Time, Part-Time, Internship, etc.)
   id: number;
   position: string;
-  company: string;
   period: string;
-  description: string;
+  company: Company;
+  details: Details;
   technologies: string[];
 }

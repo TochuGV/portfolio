@@ -2,6 +2,7 @@ import { experience } from "../../data/Portfolio";
 import { Badge } from "../ui/Badge";
 import { Section } from "../ui/Section";
 import { Timeline, TimelineItem } from "../ui/Timeline";
+import { BrandIcon } from "../ui/BrandIcon";
 
 export const Experience = () => {
   return (
@@ -10,37 +11,58 @@ export const Experience = () => {
         <Timeline>
           {experience.map((exp) => (
             <TimelineItem key={exp.id}>
-              <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 mb-2">
-                <h3 className="text-xl font-bold text-blue-300">
+              <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 shadow-sm hover:border-blue-500/30 transition-colors duration-300">
+                
+                <h3 className="text-xl font-bold text-blue-300 mb-2">
                   {exp.position}
                 </h3>
-                <span className="hidden sm:block text-slate-600">•</span>
-                <h4 className="text-lg text-slate-400 font-medium">
-                  {exp.company}
-                </h4>
-              </div>
 
-              <div className="mb-4">
-                <span className="inline-block px-3 py-1 text-sm font-mono text-blue-400 bg-blue-900/20 rounded-full border border-blue-900/30">
-                  {exp.period}
-                </span>
-              </div>
+                <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mb-4">
+                  <div className="flex items-center gap-2">
+                    {exp.company.logo && (
+                      <BrandIcon
+                        name={exp.company.name}
+                        icon={exp.company.logo}
+                        className="w-6 h-6 rounded bg-slate-100 p-0.5 shadow-sm object-contain"
+                      />
+                    )}
+                    <h4 className="text-lg text-slate-400 font-medium">
+                      {exp.company.name}
+                    </h4>
+                  </div>
 
-              <p className="text-gray-400 leading-relaxed text-lg">
-                {exp.description}
-              </p>
+                  <span className="hidden sm:block text-slate-600">•</span>
 
-              <div className="flex flex-wrap gap-2">
-                {exp.technologies.map((tech) => (
-                  <Badge key={tech} variant="secondary">
-                    {tech}
-                  </Badge>
-                ))}
+                  <span className="inline-block px-3 py-1 text-xs font-mono text-blue-400 bg-blue-900/20 rounded-full border border-blue-900/30 w-fit">
+                    {exp.period}
+                  </span>
+                </div>
+
+                <p className="text-gray-300 leading-relaxed text-lg mb-4">
+                  {exp.details.summary}
+                </p>
+
+                <ul className="list-disc list-inside space-y-2 mb-6 text-gray-400">
+                  {exp.details.achievements.map((item, index) => (
+                    <li key={index} className="marker:text-blue-500/50">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="flex flex-wrap gap-2 pt-4 border-t border-slate-700/50">
+                  {exp.technologies.map((tech) => (
+                    <Badge key={tech} variant="secondary">
+                      {tech}
+                    </Badge>
+                  ))}
+                </div>
+
               </div>
             </TimelineItem>
           ))}
         </Timeline>
       </div>
     </Section>
-  )
-}
+  );
+};

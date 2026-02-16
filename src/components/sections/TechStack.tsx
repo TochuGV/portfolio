@@ -1,6 +1,6 @@
 import { techStack } from "../../data/Portfolio"
 import { Section } from "../ui/Section"
-import { TechIcon } from "../shared/TechIcon"
+import { BrandIcon } from "../ui/BrandIcon"
 
 export const TechStack = () => {
   return (
@@ -20,7 +20,7 @@ export const TechStack = () => {
                     key={tech.name}
                     className="flex items-center gap-3 p-2 rounded-lg hover:bg-blue-900/20 transition-colors"
                   >
-                    <TechIcon
+                    <BrandIcon
                       name={tech.name}
                       icon={tech.icon}
                       className="w-10 h-10"
