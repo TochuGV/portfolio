@@ -1,4 +1,5 @@
 import { experience } from "../../data/Portfolio";
+import { Badge } from "../ui/Badge";
 import { Section } from "../ui/Section";
 import { Timeline, TimelineItem } from "../ui/Timeline";
 
@@ -28,6 +29,14 @@ export const Experience = () => {
               <p className="text-gray-400 leading-relaxed text-lg">
                 {exp.description}
               </p>
+
+              <div className="flex flex-wrap gap-2">
+                {exp.technologies.map((tech) => (
+                  <Badge key={tech} variant="secondary">
+                    {tech}
+                  </Badge>
+                ))}
+              </div>
             </TimelineItem>
           ))}
         </Timeline>
