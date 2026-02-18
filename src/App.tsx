@@ -1,5 +1,5 @@
 import { Navbar, Footer } from "./components/layout"
-import { Projects, Experience, TechStack } from "./components/sections";
+import { AboutMe, Projects, Experience, TechStack } from "./components/sections";
 
 const App = () => {
   return (
@@ -61,26 +61,7 @@ const App = () => {
         </div>
       </section>
 
-      {/* About Me Section */}
-      <section id="sobre-mí" className="py-20 px-6 bg-slate-900/50">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold mb-8 text-center text-blue-400">
-            Sobre Mí
-          </h2>
-          <div className="bg-slate-900/80 rounded-2xl p-8 border border-blue-900/30">
-            <p className="text-gray-300 text-lg leading-relaxed mb-4">
-              Soy un desarrollador full stack con experiencia en la creación de aplicaciones web
-              modernas y escalables. Me apasiona aprender nuevas tecnologías y resolver problemas
-              complejos con código limpio y eficiente.
-            </p>
-            <p className="text-gray-300 text-lg leading-relaxed">
-              Cuando no estoy programando, disfruto [tus hobbies]. Siempre busco nuevos desafíos
-              y oportunidades para crecer profesionalmente.
-            </p>
-          </div>
-        </div>
-      </section>
-
+      <AboutMe />
       <Projects />
       <Experience />
       <TechStack />
