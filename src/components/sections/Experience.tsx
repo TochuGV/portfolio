@@ -57,9 +57,9 @@ export const Experience = () => {
                 </ul>
 
                 <div className="flex flex-wrap gap-2 pt-4 border-t border-slate-700/50">
-                  {exp.technologies.map((tech) => (
-                    <Badge key={tech} variant="secondary">
-                      {tech}
+                  {exp.technologies.map((t) => (
+                    <Badge key={t} variant="secondary">
+                      {t}
                     </Badge>
                   ))}
                 </div>

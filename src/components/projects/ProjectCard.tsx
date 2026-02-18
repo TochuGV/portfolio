@@ -22,15 +22,13 @@ const ProjectCard = ({ project }: Props) => {
       </div>
 
       <div className="p-6 flex flex-col grow">
-
         <div className="flex flex-wrap gap-2 mb-3"> 
-          {project.concepts.map((tag) => (
-            <span key={tag} className="text-xs font-bold uppercase tracking-wider text-blue-400 border border-blue-500/20 px-2 py-0.5 rounded bg-blue-500/5">
-              {tag}
-            </span>
+          {project.concepts.map((c) => (
+            <Badge key={c} variant="primary">
+              {c}
+            </Badge>
           ))}
         </div>
-
 
         <h3 className="text-xl font-bold text-blue-300 mb-2 group-hover:text-blue-200 transition-colors">
           {project.title}
@@ -41,9 +39,9 @@ const ProjectCard = ({ project }: Props) => {
         </p>
 
         <div className="flex flex-wrap gap-2 mb-6">
-          {project.technologies.map((tech) => (
-            <Badge key={tech} variant="secondary" className="text-xs py-0.5">
-              {tech}
+          {project.technologies.map((t) => (
+            <Badge key={t} variant="secondary">
+              {t}
             </Badge>
           ))}
         </div>
