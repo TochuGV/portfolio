@@ -10,9 +10,11 @@ export const TechStack = () => {
               key={category.name}
               className="p-6 hover:bg-slate-800/50 transition-colors duration-300"
             >
+              <div className="mb-6 border-b border-blue-900/30 pb-3">
               <h3 className="text-xl font-bold mb-4 text-blue-300 text-center">
                 {category.name}
               </h3>
+              </div>
               <div className="space-y-3">
                 {category.technologies.map((tech) => (
                   <div
