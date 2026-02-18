@@ -1,6 +1,5 @@
+import { BrandIcon, Section } from "../ui"
 import { techStack } from "../../data/Portfolio"
-import { Section } from "../ui/Section"
-import { BrandIcon } from "../ui/BrandIcon"
 
 export const TechStack = () => {
   return (

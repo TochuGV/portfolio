@@ -1,8 +1,5 @@
+import { Badge, BrandIcon, Section, Timeline, TimelineItem } from "../ui";
 import { experience } from "../../data/Portfolio";
-import { Badge } from "../ui/Badge";
-import { Section } from "../ui/Section";
-import { Timeline, TimelineItem } from "../ui/Timeline";
-import { BrandIcon } from "../ui/BrandIcon";
 
 export const Experience = () => {
   return (

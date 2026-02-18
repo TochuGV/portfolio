@@ -1,5 +1,5 @@
+import { Section } from "../ui";
 import { projects } from "../../data/Portfolio";
-import { Section } from "../ui/Section";
 import ProjectCard from "../projects/ProjectCard"
 
 export const Projects = () => {
