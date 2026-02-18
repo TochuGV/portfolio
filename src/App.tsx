@@ -1,29 +1,10 @@
+import { Navbar, Footer } from "./components/layout"
 import { Projects, Experience, TechStack } from "./components/sections";
 
 const App = () => {
   return (
     <div className="bg-slate-950 text-gray-100 min-h-screen">
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-slate-900/95 backdrop-blur-sm z-50 border-b border-blue-900/20">
-        <div className="max-w-7xl mx-auto px-6 py-4">
-          <div className="flex justify-between items-center">
-            <h1 className="text-2xl font-bold bg-linear-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
-              Mi Portfolio
-            </h1>
-            <div className="flex gap-6">
-              {['Inicio', 'Sobre Mí', 'Proyectos', 'Experiencia', 'Tech Stack', 'Contacto'].map((item, idx) => (
-                <a
-                  key={idx}
-                  href={`#${item.toLowerCase().replace(' ', '-')}`}
-                  className="text-gray-300 hover:text-blue-400 transition-colors duration-300"
-                >
-                  {item}
-                </a>
-              ))}
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* Hero Section */}
       <section id="inicio" className="min-h-screen flex items-center justify-center px-6 pt-20">
@@ -153,12 +134,8 @@ const App = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-8 px-6 border-t border-blue-900/20">
-        <div className="max-w-6xl mx-auto text-center text-gray-400">
-          <p>© 2024 [Tu Nombre]. Todos los derechos reservados.</p>
-        </div>
-      </footer>
+      <Footer />
+
     </div>
   );
 };
