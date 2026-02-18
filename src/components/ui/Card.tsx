@@ -3,9 +3,29 @@ interface Props {
   className?: string;
 }
 
+/*
+      bg-slate-900/80 
+        rounded-xl 
+        p-6
+        border
+        border-blue-900/30
+        hover:border-blue-600/50
+        transition-all
+        duration-300
+        hover:transform 
+        hover:scale-105
+*/
+
 export const Card = ({ children, className="" }: Props) => {
   return (
-    <div className={`bg-slate-900/80 rounded-xl p-6 border border-blue-900/30 hover:border-blue-600/50 transition-all duration-300 hover:transform hover:scale-105 ${className}`}>
+    <div className={`
+    bg-slate-900/80 
+      backdrop-blur-sm 
+      rounded-xl 
+      border border-blue-900/30
+      ${className}
+      `}
+    >
       {children}
     </div>
   )

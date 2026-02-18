@@ -10,13 +10,13 @@ interface Props {
 
 const ProjectCard = ({ project }: Props) => {
   return (
-    <Card className="group overflow-hidden hover:border-blue-500/30 hover:-translate-y-1 hover:shadow-xl flex flex-col h-full">
+    <Card className="group overflow-hidden flex flex-col h-full hover:border-blue-500/30 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-900/20">
       
-      <div className="relative h-48 overflow-hidden">
+      <div className="relative h-48 overflow-hidden bg-slate-950 p-4 group">
         <img 
           src={project.image} 
           alt={project.title} 
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
         />
         <div className="absolute inset-0 bg-linear-to-t from-slate-900/90 to-transparent opacity-60"></div>
       </div>

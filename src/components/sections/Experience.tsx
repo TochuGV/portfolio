@@ -1,4 +1,4 @@
-import { Badge, BrandIcon, Section, Timeline, TimelineItem } from "../ui";
+import { Badge, BrandIcon, Card, Section, Timeline, TimelineItem } from "../ui";
 import { experience } from "../../data/Portfolio";
 
 export const Experience = () => {
@@ -8,7 +8,7 @@ export const Experience = () => {
         <Timeline>
           {experience.map((exp) => (
             <TimelineItem key={exp.id}>
-              <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 shadow-sm hover:border-blue-500/30 transition-colors duration-300">
+              <Card className="p-6 shadow-sm hover:border-blue-500/30 transition-colors duration-300">
                 <h3 className="text-xl font-bold text-blue-300 mb-2">
                   {exp.position}
                 </h3>
@@ -64,7 +64,7 @@ export const Experience = () => {
                   ))}
                 </div>
 
-              </div>
+              </Card>
             </TimelineItem>
           ))}
         </Timeline>

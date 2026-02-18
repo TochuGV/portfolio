@@ -1,14 +1,14 @@
-import { BrandIcon, Section } from "../ui"
+import { BrandIcon, Card, Section } from "../ui"
 import { techStack } from "../../data/Portfolio"
 
 export const TechStack = () => {
   return (
     <Section id="tech-stack" title="Tech Stack">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {techStack.map((category) => (
-            <div
+            <Card
               key={category.name}
-              className="bg-slate-900/80 rounded-xl p-6 border border-blue-900/30"
+              className="p-6 hover:bg-slate-800/50 transition-colors duration-300"
             >
               <h3 className="text-xl font-bold mb-4 text-blue-300 text-center">
                 {category.name}
@@ -28,7 +28,7 @@ export const TechStack = () => {
                   </div>
                 ))}
             </div>
-          </div>
+          </Card>
         ))}
       </div>
     </Section>
