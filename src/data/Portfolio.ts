@@ -6,6 +6,7 @@ export const projects: Project[] = [
     title: "node-socketio-chat",
     image: "/companies/yoizen.png",
     description: "Real-time chat application with multiple settings using WebSockets...",
+    concepts: ["Real-Time", "WebSockets"],
     technologies: ["JavaScript", "Node.js", "Express", "Socket.IO", "MongoDB", "Passport.js???"],
     repoUrl: "https://github.com/TochuGV/node-socketio-chat",
     demoUrl: "https://node-socketio-chat-aaw8.onrender.com/"
@@ -14,7 +15,8 @@ export const projects: Project[] = [
     id: 2,
     title: "Characters.API",
     image: "/companies/yoizen.png",
-    description: "RESTful API created to manage characters with autentication and avanced search...",
+    description: "RESTful API created to manage characters with authentication and advanced search...",
+    concepts: ["REST API", "Architecture"],
     technologies: ["JavaScript", "Node.js", "Express", "Prisma", "SQL Server", "Zod", "JWT", "Redis", "Docker", "Passport.js"],
     repoUrl: "https://github.com/TochuGV/Characters.API",
   },
@@ -23,6 +25,7 @@ export const projects: Project[] = [
     title: "Jungle Chess",
     image: "/companies/yoizen.png",
     description: "Implementation of the logic of the board game 'Dou Shou Qi'...",
+    concepts: ["Game Logic", "Algorithms"], 
     technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
     repoUrl: "https://github.com/TochuGV/jungle-chess-web",
     demoUrl: "https://jungle-chess-web.vercel.app"

@@ -3,6 +3,7 @@ export interface Project {
   title: string;
   image: string;
   description: string;
+  concepts: string[];
   technologies: string[];
   repoUrl: string;
   demoUrl?: string; // Si fuera Backend, no sería necesario agregar uno.
