@@ -10,7 +10,6 @@ export const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  // <nav className="fixed top-0 w-full bg-slate-900/95 backdrop-blur-sm z-50 border-b border-blue-900/20">
 
   const navItems = ['Home', 'About Me', 'Projects', 'Experience', 'Tech Stack', 'Contact'];
 
@@ -23,9 +22,15 @@ export const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         <a 
           href="#home" 
-          className="text-2xl font-bold bg-linear-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent"
+          className="flex items-center gap-2 group transition-opacity hover:opacity-80"
         >
-          TGV
+          <div className="relative w-12 h-12 flex items-center justify-center">
+            <img 
+              src="src/assets/logo.png"
+              alt="Logo" 
+              className="w-full h-full object-contain transition-transform duration-300 group-hover:-rotate-12 group-hover:scale-110" 
+            />
+          </div>
         </a>
         <div className="hidden md:flex items-center gap-12">
           {navItems.map((item) => (
