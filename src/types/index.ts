@@ -1,11 +1,11 @@
-export interface TechItem {
-  name: string;
-  icon: string;
-}
-
-export interface TechCategory {
-  name: string;
-  technologies: TechItem[];
+export interface Project { 
+  id: number;
+  title: string;
+  image: string;
+  description: string;
+  technologies: string[];
+  repoUrl: string;
+  demoUrl?: string; // Si fuera Backend, no sería necesario agregar uno.
 }
 
 export interface Company {
@@ -26,4 +26,14 @@ export interface Experience { // Revisar si agregar 'mode' (Full-Time, Part-Time
   company: Company;
   details: Details;
   technologies: string[];
+}
+
+export interface TechItem {
+  name: string;
+  icon: string;
+}
+
+export interface TechCategory {
+  name: string;
+  technologies: TechItem[];
 }

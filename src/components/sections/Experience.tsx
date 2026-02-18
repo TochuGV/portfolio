@@ -27,7 +27,7 @@ export const Experience = () => {
                       <BrandIcon
                         name={exp.company.name}
                         icon={exp.company.logo}
-                        className="w-6 h-6 rounded bg-slate-100 p-0.5 shadow-sm object-contain transition-all duration-300 group-hover:ring-2 group-hover:ring-blue-400/50 mr-2"
+                        className="w-6 h-6 rounded bg-slate-100 p-0.5 shadow-sm object-contain transition-all duration-300 group-hover:ring-2 group-hover:ring-blue-400/50 mr-1"
                       />
                     )}
                     <h4 className="text-lg text-slate-400 font-medium transition-colors duration-300 group-hover:text-blue-300">

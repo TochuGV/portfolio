@@ -1,2 +1,3 @@
-export * from './Experience.tsx'
-export * from './TechStack.tsx'
+export * from './Projects'
+export * from './Experience'
+export * from './TechStack'

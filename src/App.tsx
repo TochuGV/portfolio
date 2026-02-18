@@ -1,46 +1,6 @@
-import { Experience, TechStack } from "./components/sections";
+import { Projects, Experience, TechStack } from "./components/sections";
 
 const App = () => {
-  const projects = [
-    {
-      id: 1,
-      title: "Proyecto 1",
-      description: "Descripción breve del proyecto. Explica qué problema resuelve y las características principales.",
-      technologies: [
-        { name: "React", icon: "react" },
-        { name: "TypeScript", icon: "ts" },
-        { name: "Node.js", icon: "nodejs" },
-        { name: "MongoDB", icon: "mongodb" }
-      ],
-      github: "#",
-      demo: "#"
-    },
-    {
-      id: 2,
-      title: "Proyecto 2",
-      description: "Descripción breve del proyecto. Explica qué problema resuelve y las características principales.",
-      technologies: [
-        { name: "Next.js", icon: "nextjs" },
-        { name: "Tailwind", icon: "tailwind" },
-        { name: "PostgreSQL", icon: "postgres" }
-      ],
-      github: "#",
-      demo: "#"
-    },
-    {
-      id: 3,
-      title: "Proyecto 3",
-      description: "Descripción breve del proyecto. Explica qué problema resuelve y las características principales.",
-      technologies: [
-        { name: "Python", icon: "py" },
-        { name: "FastAPI", icon: "fastapi" },
-        { name: "Docker", icon: "docker" }
-      ],
-      github: "#",
-      demo: "#"
-    }
-  ];
-
   return (
     <div className="bg-slate-950 text-gray-100 min-h-screen">
       {/* Navigation */}
@@ -140,70 +100,7 @@ const App = () => {
         </div>
       </section>
 
-      {/* Projects Section */}
-      <section id="proyectos" className="py-20 px-6">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center text-blue-400">
-            Proyectos
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {projects.map((project) => (
-              <div
-                key={project.id}
-                className="bg-slate-900/80 rounded-xl p-6 border border-blue-900/30 hover:border-blue-600/50 transition-all duration-300 hover:transform hover:scale-105"
-              >
-                <h3 className="text-2xl font-bold mb-3 text-blue-300">
-                  {project.title}
-                </h3>
-                <p className="text-gray-400 mb-4 leading-relaxed">
-                  {project.description}
-                </p>
-                <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-gray-500 mb-3">Tecnologías:</h4>
-                  <div className="flex flex-wrap gap-3">
-                    {project.technologies.map((tech, idx) => (
-                      <div key={idx} className="flex flex-col items-center gap-1">
-                        <img 
-                          src={`https://skillicons.dev/icons?i=${tech.icon}`}
-                          alt={tech.name}
-                          className="w-10 h-10"
-                          title={tech.name}
-                        />
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                <div className="flex gap-4 mt-4">
-                  <a
-                    href={project.github}
-                    className="flex items-center gap-2 text-gray-400 hover:text-blue-400 transition-colors"
-                  >
-                    <img 
-                      src="https://skillicons.dev/icons?i=github"
-                      alt="GitHub"
-                      className="w-5 h-5"
-                    />
-                    <span className="text-sm">Código</span>
-                  </a>
-                  <a
-                    href={project.demo}
-                    className="flex items-center gap-2 text-gray-400 hover:text-blue-400 transition-colors"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                      <polyline points="15 3 21 3 21 9"></polyline>
-                      <line x1="10" y1="14" x2="21" y2="3"></line>
-                    </svg>
-                    <span className="text-sm">Demo</span>
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      
+      <Projects />
       <Experience />
       <TechStack />
 
