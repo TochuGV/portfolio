@@ -10,14 +10,23 @@ export const projects: Project[] = [
     repoUrl: "https://github.com/TochuGV/node-socketio-chat",
     demoUrl: "https://node-socketio-chat-aaw8.onrender.com/"
   },
-    {
+  {
     id: 2,
     title: "Characters.API",
     image: "/companies/yoizen.png",
     description: "RESTful API created to manage characters with autentication and avanced search...",
     technologies: ["JavaScript", "Node.js", "Express", "Prisma", "SQL Server", "Zod", "JWT", "Redis", "Docker", "Passport.js"],
     repoUrl: "https://github.com/TochuGV/Characters.API",
-  }
+  },
+  {
+    id: 3,
+    title: "Jungle Chess",
+    image: "/companies/yoizen.png",
+    description: "Implementation of the logic of the board game 'Dou Shou Qi'...",
+    technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+    repoUrl: "https://github.com/TochuGV/jungle-chess-web",
+    demoUrl: "https://jungle-chess-web.vercel.app"
+  },
 ]
 
 export const experience: Experience[] = [
