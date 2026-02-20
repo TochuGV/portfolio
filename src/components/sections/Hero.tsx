@@ -19,16 +19,16 @@ export const Hero = () => {
               with focus on scalability and user experience.
             </p>
             
-            <div className="flex gap-4 mb-8">
+            <div className="flex items-center gap-4 mb-8">
               <Link
                 href="#contact"
-                className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-all duration-300 transform hover:scale-105"
+                className="inline-flex items-center justify-center px-8 py-3 bg-blue-600 text-white border-2 border-blue-600 rounded-lg transition-all duration-300 hover:bg-blue-700 hover:border-blue-700 hover:shadow-[0_0_2rem] hover:shadow-blue-500/40 hover:-translate-y-1"
               >
                 Contact Me
               </Link>
               <Link
                 href="#projects"
-                className="px-8 py-3 border-2 border-blue-600 text-blue-400 hover:bg-blue-600/10 rounded-lg transition-all duration-300"
+                className="inline-flex items-center justify-center px-8 py-3 border-2 border-blue-600 text-blue-400 rounded-lg transition-all duration-300 hover:bg-blue-600 hover:text-white hover:shadow-[0_0_2rem] hover:shadow-blue-500/40 hover:-translate-y-1"
               >
                 View Projects
               </Link>
