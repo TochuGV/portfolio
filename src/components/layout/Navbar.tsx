@@ -19,7 +19,7 @@ export const Navbar = () => {
         ? "bg-slate-900/80 backdrop-blur-md border-b border-slate-800 py-4 shadow-lg"
         : "bg-transparent py-6 border-b border-transparent"
     }`}>
-      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
+      <div className="max-w-960 mx-auto px-6 flex justify-between items-center">
         <a 
           href="#home" 
           className="flex items-center gap-2 group transition-opacity hover:opacity-80"

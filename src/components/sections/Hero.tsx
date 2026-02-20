@@ -3,7 +3,7 @@ import { BrandIcon, Button, IconLink, Section } from "../ui"
 export const Hero = () => {
   return (
     <Section id="home" className="min-h-screen flex items-center py-20 px-4 md:px-8">
-      <div className="max-w-450 mx-auto w-full">
+      <div className="w-full">
         <div className="grid md:grid-cols-[55%_45%] gap-16 items-center">
           <div>
             <h1 className="text-6xl md:text-7xl font-bold text-white mb-4">
