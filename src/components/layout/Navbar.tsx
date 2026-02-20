@@ -47,7 +47,7 @@ export const Navbar = () => {
           <Link
             href="/resume/CV_Tobías_Vallejos_ENG.pdf"
             target="_blank"
-            className="px-4 py-2 border-2 border-blue-500 text-blue-400 rounded-lg hover:bg-blue-500/10 transition-all duration-300 font-medium"
+            className="px-4 py-2 border-2 text-slate-300 border-blue-600 rounded-lg hover:border-blue-700 hover:bg-blue-700 hover:shadow-[0_0_2rem] hover:shadow-blue-500/40 transition-all duration-300 font-medium"
           >
             Resume
           </Link>
