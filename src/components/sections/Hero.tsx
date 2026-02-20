@@ -1,4 +1,5 @@
 import { BrandIcon, Link, Section } from "../ui"
+import profileImage from "../../assets/logo.png"
 
 export const Hero = () => {
   return (
@@ -52,7 +53,7 @@ export const Hero = () => {
           <div className="flex justify-center md:justify-end">
             <div className="relative w-80 h-96">
               <img 
-                src="src/assets/logo.png"
+                src={profileImage}
                 alt="Tobías Vallejos"
                 className="w-full h-full object-cover rounded-2xl border-2 border-blue-500/30 shadow-2xl shadow-blue-900/20"
               />

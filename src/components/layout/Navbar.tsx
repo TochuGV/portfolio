@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "../ui/Link";
+import logoImage from '../../assets/logo.png'
 
 export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -27,7 +28,7 @@ export const Navbar = () => {
         >
           <div className="relative w-12 h-12 flex items-center justify-center">
             <img 
-              src="src/assets/logo.png"
+              src={logoImage}
               alt="Logo" 
               className="w-full h-full object-contain transition-transform duration-300 group-hover:-rotate-12 group-hover:scale-110" 
             />
