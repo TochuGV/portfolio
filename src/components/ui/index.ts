@@ -1,5 +1,7 @@
 export * from './Badge'
+export * from './Button'
 export * from './BrandIcon'
 export * from './Card'
+export * from './IconLink'
 export * from './Section'
 export * from './Timeline'

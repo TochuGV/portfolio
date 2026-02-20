@@ -1,6 +1,6 @@
 interface Props {
   id: string; // Ver si es necesario.
-  title?: string; // Revisar 'Hero'.
+  title?: string;
   children: React.ReactNode;
   className?: string;
 }

@@ -8,10 +8,10 @@ export const TechStack = () => {
           {techStack.map((category) => (
             <Card
               key={category.name}
-              className="p-6 hover:bg-slate-800/50 transition-colors duration-300"
+              className="p-6 hover:border-blue-500/40 hover:shadow-lg hover:shadow-blue-900/20 transition-all duration-300"
             >
-              <div className="mb-6 border-b border-blue-900/30 pb-3">
-              <h3 className="text-xl font-bold mb-4 text-blue-300 text-center">
+              <div className="border-b border-blue-900/30 pb-6 mb-4">
+              <h3 className="text-xl font-bold text-blue-300 text-center">
                 {category.name}
               </h3>
               </div>
@@ -19,7 +19,7 @@ export const TechStack = () => {
                 {category.technologies.map((tech) => (
                   <div
                     key={tech.name}
-                    className="flex items-center gap-3 p-2 rounded-lg hover:bg-blue-900/20 transition-colors"
+                    className="flex items-center gap-3 p-2 rounded-lg"
                   >
                     <BrandIcon
                       name={tech.name}

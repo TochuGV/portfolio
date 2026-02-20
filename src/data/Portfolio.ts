@@ -43,11 +43,11 @@ export const experience: Experience[] = [
       logo: "/companies/yoizen.png"
     }, 
     details: {
-      summary: "Desarrollo y mantenimiento para ySocial, una plataforma omnicanal para la gestión de atención al cliente en redes sociales y canales digitales.",
+      summary: "Development and maintenance for ySocial, an omnichannel platform for customer service management across social media and digital channels.",
       achievements: [
-        "Implementación y mantenimiento de funcionalidades en C#, Angular y JavaScript.",
-        "Integración con SQL Server para el manejo de interacciones entre usuarios y agentes.",
-        "Optimización de la experiencia de usuario en canales como WhatsApp, Instagram y Facebook."
+        "Developed new features focused on improving omnichannel interaction between users and agents within the platform.",
+        "Managed and optimized databases to ensure persistence and fluidity of real-time communications.",
+        "Enhanced user experience (UX) in social media integrations, achieving more efficient and direct service flows."
       ]
     },
     technologies: ["C#", "Angular", "JavaScript", "SQL Server", "jQuery", "Node.js"]
@@ -62,11 +62,11 @@ export const experience: Experience[] = [
       logo: "/companies/wirsolut.png"
     },
     details: {
-      summary: "Desarrollo de una API RESTful para WirTrack, una plataforma web diseñada para optimizar la gestión logística y la seguridad en el transporte de mercancías.",
+      summary: "Development of a RESTful API for WirTrack, a web platform designed to optimize logistics management and security in freight transportation.",
       achievements: [
-        "Diseño y construcción de endpoints para el registro y consulta de rutas de viaje.",
-        "Validación de datos con Zod e integración con PostgreSQL mediante TypeORM.",
-        "Implementación de estándares de desarrollo Backend utilizando TypeScript, Node.js y Express."
+        "Architected and developed specific endpoints for real-time logistics route registration and querying.",
+        "Designed data models and integrated with relational databases to ensure information integrity and consistency.",
+        "Applied robust development standards to build a secure, maintainable API ready for production environments."
       ],
     },
     technologies: ["TypeScript", "Node.js", "Express", "PostgreSQL", "TypeORM", "Zod", "Docker"]
