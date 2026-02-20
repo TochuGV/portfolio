@@ -1,4 +1,4 @@
-import { BrandIcon, Button, IconLink, Section } from "../ui"
+import { BrandIcon, Link, Section } from "../ui"
 
 export const Hero = () => {
   return (
@@ -20,32 +20,32 @@ export const Hero = () => {
             </p>
             
             <div className="flex gap-4 mb-8">
-              <Button
+              <Link
                 href="#contact"
                 className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-all duration-300 transform hover:scale-105"
               >
                 Contact Me
-              </Button>
-              <Button
+              </Link>
+              <Link
                 href="#projects"
                 className="px-8 py-3 border-2 border-blue-600 text-blue-400 hover:bg-blue-600/10 rounded-lg transition-all duration-300"
               >
                 View Projects
-              </Button>
+              </Link>
             </div>
             
             <div className="flex gap-5">
-              <IconLink href="https://github.com/TochuGV">
+              <Link href="https://github.com/TochuGV" className="hover:scale-110 transition-transform">
                 <BrandIcon name="GitHub" icon="github" />
-              </IconLink>
+              </Link>
               
-              <IconLink href="https://linkedin.com/in/tobiasvallejos">
+              <Link href="https://linkedin.com/in/tobiasvallejos" className="hover:scale-110 transition-transform">
                 <BrandIcon name="LinkedIn" icon="linkedin" />
-              </IconLink>
+              </Link>
               
-              <IconLink href="mailto:tu@email.com">
+              <Link href="mailto:tu@email.com" className="hover:scale-110 transition-transform">
                 <BrandIcon name="Gmail" icon="gmail" />
-              </IconLink>
+              </Link>
             </div>
           </div>
 

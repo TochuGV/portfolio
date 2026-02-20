@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "../ui/Link";
 
 export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -20,7 +21,7 @@ export const Navbar = () => {
         : "bg-transparent py-6 border-b border-transparent"
     }`}>
       <div className="max-w-960 mx-auto px-6 flex justify-between items-center">
-        <a 
+        <Link 
           href="#home" 
           className="flex items-center gap-2 group transition-opacity hover:opacity-80"
         >
@@ -31,25 +32,24 @@ export const Navbar = () => {
               className="w-full h-full object-contain transition-transform duration-300 group-hover:-rotate-12 group-hover:scale-110" 
             />
           </div>
-        </a>
+        </Link>
         <div className="hidden md:flex items-center gap-12">
           {navItems.map((item) => (
-            <a
+            <Link
               key={item}
               href={`#${item.toLowerCase().replace(' ', '-')}`}
               className="text-md font-medium text-slate-300 hover:text-blue-400 transition-colors"
             >
               {item}
-            </a>
+            </Link>
           ))}
-          <a
+          <Link
             href="/resume/CV_Tobías_Vallejos_ENG.pdf"
             target="_blank"
-            rel="noopener noreferrer"
             className="px-4 py-2 border-2 border-blue-500 text-blue-400 rounded-lg hover:bg-blue-500/10 transition-all duration-300 font-medium"
           >
             Resume
-          </a>
+          </Link>
         </div>
 
         <div className="md:hidden text-slate-300">
