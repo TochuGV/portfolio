@@ -42,6 +42,14 @@ export const Navbar = () => {
               {item}
             </a>
           ))}
+          <a
+            href="/resume/CV_Tobías_Vallejos_ENG.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-2 border-2 border-blue-500 text-blue-400 rounded-lg hover:bg-blue-500/10 transition-all duration-300 font-medium"
+          >
+            Resume
+          </a>
         </div>
 
         <div className="md:hidden text-slate-300">
