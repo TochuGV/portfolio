@@ -3,7 +3,7 @@ import { experience } from "../../data/Portfolio";
 
 export const Experience = () => {
   return (
-    <Section id="experience" title="Experience" className="bg-slate-900/50">
+    <Section id="experience" title="Experience" gradientDirection="t">
       <div className="max-w-400 mx-auto">
         <Timeline>
           {experience.map((exp) => (

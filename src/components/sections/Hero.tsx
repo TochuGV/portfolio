@@ -2,7 +2,7 @@ import { BrandIcon, Link, Section } from "../ui"
 
 export const Hero = () => {
   return (
-    <Section id="home" className="min-h-screen flex items-center py-20 px-4 md:px-8">
+    <Section id="home" className="min-h-screen flex items-center py-20 px-4 md:px-8" gradientDirection="b">
       <div className="w-full">
         <div className="grid md:grid-cols-[55%_45%] gap-16 items-center">
           <div>

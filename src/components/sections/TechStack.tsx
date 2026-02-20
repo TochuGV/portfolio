@@ -3,7 +3,7 @@ import { techStack } from "../../data/Portfolio"
 
 export const TechStack = () => {
   return (
-    <Section id="tech-stack" title="Tech Stack">
+    <Section id="tech-stack" title="Tech Stack" gradientDirection="b">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {techStack.map((category) => (
             <Card
