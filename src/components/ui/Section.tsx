@@ -8,6 +8,7 @@ interface Props {
 
 export const Section = ({ id, title, children, className="", gradientDirection }: Props) => {
   
+  // bg-linear-to-t bg-linear-to-b
   const bgClass = gradientDirection
     ? `bg-linear-to-${gradientDirection} from-slate-950 to-blue-900/25`
     : "bg-slate-950"
