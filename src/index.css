@@ -16,7 +16,11 @@ html {
 
 ::-webkit-scrollbar-thumb {
   background: #1e40af;
-  border-radius: 5px;
+  border-radius:
+    var(--scrollbar-top-radius, 5px) 
+    var(--scrollbar-top-radius, 5px) 
+    var(--scrollbar-bottom-radius, 5px) 
+    var(--scrollbar-bottom-radius, 5px);
 }
 
 ::-webkit-scrollbar-thumb:hover {
