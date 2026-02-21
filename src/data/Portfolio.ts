@@ -78,12 +78,9 @@ export const techStack: TechCategory[] = [
     name: "Frontend", 
     technologies: [
       { name: "React", icon: "react" },
-      { name: "JavaScript", icon: "js" }, // Cuando tenga más proyecto con TypeScript, esta se va.
       { name: "TypeScript", icon: "ts" },
       { name: "Next.js", icon: "nextjs" },
       { name: "Tailwind CSS", icon: "tailwind" },
-      //{ name: "React Native", icon: "reactnative" }, // Hasta 'EventGallery', no se escribe. Falta el logo.
-      //{ name: "Expo", icon: "expo" }, // Hasta 'EventGallery', no se escribe. Falta el logo.
       { name: "Angular", icon: "angular" }
     ],
   },
@@ -94,30 +91,42 @@ export const techStack: TechCategory[] = [
       { name: "Express", icon: "express" },
       { name: "C#", icon: "cs" },
       { name: ".NET", icon: "dotnet" },
-      //{ name: "cloudflare", icon: "cloudflare" }, // Hasta 'EventGallery', no se escribe. Está bien acá?
+      { name: "Jest", icon: "jest" },
     ],
   },
   {
     name: "Databases",
     technologies: [
       { name: "SQL Server", icon: "sqlserver" },
+      { name: "PostgreSQL", icon: "postgres" }, // Hasta saber Supabase, se queda.
+      { name: "MongoDB", icon: "mongodb" },
       { name: "Prisma", icon: "prisma" },
       { name: "Redis", icon: "redis" },
-      { name: "MongoDB", icon: "mongodb" },
-      { name: "PostgreSQL", icon: "postgres" }, // Hasta saber Supabase, se queda.
-      //{ name: "Supabase", icon: "supabase" }, // Hasta que no la utilice, no se pone.
-      { name: "TypeORM", icon: "typeorm"}
     ],
+  },
+  {
+    name: "Cloud & DevOps",
+    technologies: [
+      { name: "Docker", icon: "docker" },
+      { name: "Vercel", icon: "vercel" },
+      { name: "GitHub Actions", icon: "githubactions" },
+      { name: "Render", icon: "render" },
+      { name: "Azure DevOps", icon: "azure" }
+    ]
   },
   {
     name: "Tools",
     technologies: [
       { name: "Git", icon: "git" },
-      { name: "Docker", icon: "docker" },
       { name: "Postman", icon: "postman" },
-      { name: "Vercel", icon: "vercel" }, // Se supone que esto lo voy a subir ahí.
-      //{ name: "Render", icon: "render" },
+      { name: "Swagger", icon: "swagger" },
+      { name: "Figma", icon: "figma" },
       { name: "Trello", icon: "trello" }
     ]
   }
+  //{ name: "React Native", icon: "reactnative" }, // Hasta 'EventGallery', no se escribe. Falta el logo.
+  //{ name: "Expo", icon: "expo" }, // Hasta 'EventGallery', no se escribe. Falta el logo.
+  //{ name: "Supabase", icon: "supabase" }, // Hasta que no la utilice, no se pone.
+  //{ name: "Cloudflare", icon: "cloudflare" }, // Hasta 'EventGallery', no se escribe.
+  //{ name: "TypeORM", icon: "typeorm"} // Queda descartada.
 ]

@@ -4,7 +4,7 @@ import { techStack } from "../../data/Portfolio"
 export const TechStack = () => {
   return (
     <Section id="tech-stack" title="Tech Stack" gradientDirection="b">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
           {techStack.map((category) => (
             <Card
               key={category.name}
@@ -26,7 +26,7 @@ export const TechStack = () => {
                       icon={tech.icon}
                       className="w-10 h-10"
                     />
-                    <span className="text-gray-300 font-semibold select-none">{tech.name}</span>
+                    <span className="text-gray-300 text-lg font-semibold select-none">{tech.name}</span>
                   </div>
                 ))}
             </div>
