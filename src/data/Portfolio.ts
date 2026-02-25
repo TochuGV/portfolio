@@ -4,7 +4,7 @@ export const projects: Project[] = [
   {
     id: 1,
     title: "Macabeo Running Circuit",
-    image: "/companies/yoizen.png",
+    images: ["/companies/yoizen.png", "/companies/wirsolut.png", "/companies/yoizen.png"],
     description: "Full-stack application developed for a running club to manage and display race rankings....",
     concepts: ["Full Stack", "Data Processing"],
     technologies: ["React", "TypeScript", "Node.js", "Express", "Tailwind CSS", "Tanstack Query?"],
@@ -13,7 +13,7 @@ export const projects: Project[] = [
   {
     id: 2,
     title: "node-socketio-chat",
-    image: "/companies/yoizen.png",
+    images: ["/companies/yoizen.png", "/companies/wirsolut.png", "/companies/yoizen.png"],
     description: "Real-time chat application with multiple settings using WebSockets...",
     concepts: ["Real-Time", "WebSockets"],
     technologies: ["JavaScript", "Node.js", "Express", "Socket.IO", "MongoDB", "Passport.js"],
@@ -23,7 +23,7 @@ export const projects: Project[] = [
   {
     id: 3,
     title: "Characters.API",
-    image: "/companies/yoizen.png",
+    images: ["/companies/yoizen.png", "/companies/wirsolut.png", "/companies/yoizen.png"],
     description: "RESTful API created to manage characters with authentication and advanced search...",
     concepts: ["REST API", "Architecture"],
     technologies: ["JavaScript", "Node.js", "Express", "Prisma", "SQL Server", "Redis", "Zod", "JWT", "Docker", "GitHub Actions"],
@@ -32,7 +32,7 @@ export const projects: Project[] = [
   {
     id: 4,
     title: "Jungle Chess",
-    image: "/companies/yoizen.png",
+    images: ["/companies/yoizen.png", "/companies/wirsolut.png", "/companies/yoizen.png"],
     description: "Implementation of the logic of the board game 'Dou Shou Qi'...",
     concepts: ["Game Logic", "Algorithms"], 
     technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
