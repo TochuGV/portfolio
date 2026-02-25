@@ -47,6 +47,7 @@ const ProjectCard = ({ project }: Props) => {
         </div>
 
         <div className="flex items-center justify-center gap-8 pt-4 border-t border-slate-700/50 mt-auto">
+          {project.repoUrl && (
           <a 
             href={project.repoUrl} 
             target="_blank" 
@@ -56,6 +57,7 @@ const ProjectCard = ({ project }: Props) => {
             <FaGithub size={18} className="group-hover/link:text-white transition-colors" />
             <span>Code</span>
           </a>
+          )}
 
           {project.demoUrl && (
             <a 

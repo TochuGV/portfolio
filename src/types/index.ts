@@ -5,7 +5,7 @@ export interface Project {
   description: string;
   concepts: string[];
   technologies: string[];
-  repoUrl: string;
+  repoUrl?: string; // Si fuera un proyecto privado, no se tiene que agregar el repositorio.
   demoUrl?: string; // Si fuera Backend, no sería necesario agregar uno.
 }
 
