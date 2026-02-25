@@ -1,6 +1,7 @@
 import { FaGithub } from "react-icons/fa"
 import { FiExternalLink } from "react-icons/fi"
 import { Badge, Card, Carousel } from "../ui"
+import useCarousel from "../../hooks/useCarousel"
 import type { Project } from "../../types"
 
 interface Props {
@@ -8,11 +9,18 @@ interface Props {
 }
 
 const ProjectCard = ({ project }: Props) => {
+  const { currentIndex, nextSlide, prevSlide, goToSlide } = useCarousel(project.images?.length || 0);
+
   return (
     <Card className="group overflow-hidden flex flex-col h-full hover:border-blue-500/30 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-900/20">
-      
       <div className="relative h-48 overflow-hidden bg-slate-950 p-4 group">
-        <Carousel media={project.images} />
+        <Carousel 
+          media={project.images}
+          currentIndex={currentIndex}
+          onNext={nextSlide}
+          onPrev={prevSlide}
+          onGoTo={goToSlide}
+        />
         <div className="absolute inset-0 bg-linear-to-t from-slate-900/90 to-transparent opacity-60 pointer-events-none"></div>
       </div>
 
