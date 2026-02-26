@@ -10,7 +10,7 @@ export const Carousel = ({ media, currentIndex, onNext, onPrev, onGoTo }: Props)
   if (!media || media.length === 0) return null;
 
   return (
-    <div className="relative w-full h-48 md:h-64 overflow-hidden rounded-t-xl group">
+    <div className="relative w-full h-full overflow-hidden">
       <div
         className="flex transition-transform duration-500 ease-out h-full"
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -47,7 +47,7 @@ export const Carousel = ({ media, currentIndex, onNext, onPrev, onGoTo }: Props)
                 key={index}
                 onClick={() => onGoTo && onGoTo(index)}
                 className={`h-2 rounded-full transition-all ${
-                  index === currentIndex ? "bg-blue-500 w-4" : "bg-white/50 w-2"
+                  index === currentIndex ? "bg-blue-500 w-6" : "bg-white/70 w-3 hover:bg-white"
                 }`}
               />
             ))}
