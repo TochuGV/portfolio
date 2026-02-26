@@ -1,7 +1,12 @@
 import { useState } from "react"
 
-const useCarousel = (length: number) => {
-  const [currentIndex, setCurrentIndex] = useState(0)
+interface Props {
+  length: number;
+  initialIndex?: number;
+}
+
+const useCarousel = ({ length, initialIndex = 0 }: Props) => {
+  const [currentIndex, setCurrentIndex] = useState(initialIndex)
 
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev === length - 1 ? 0 : prev + 1))
