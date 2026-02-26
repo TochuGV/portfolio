@@ -9,7 +9,10 @@ interface Props {
 }
 
 const ProjectCarouselModal = ({ isOpen, onClose, images, initialIndex }: Props) => {
-  const { currentIndex, nextSlide, prevSlide, goToSlide } = useCarousel({ length: images.length, initialIndex });
+  const { currentIndex, nextSlide, prevSlide, goToSlide } = useCarousel({
+    length: images.length,
+    initialIndex
+  });
 
   if (!isOpen) return null;
 
@@ -31,7 +34,6 @@ const ProjectCarouselModal = ({ isOpen, onClose, images, initialIndex }: Props) 
           onGoTo={goToSlide}
         />
       </div>
-      
     </div>
   );
 }

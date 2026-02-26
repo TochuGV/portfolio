@@ -1,100 +1,89 @@
-import { useState } from "react"
 import { FaGithub } from "react-icons/fa"
 import { FiExternalLink } from "react-icons/fi"
 import { Badge, Card, Carousel } from "../ui"
 import useCarousel from "../../hooks/useCarousel"
 import type { Project } from "../../types"
-import ProjectCarouselModal from "./ProjectCarouselModal"
 
 interface Props {
   project: Project;
+  isAnyModalOpen: boolean;
+  onOpenModal: () => void;
 }
 
-const ProjectCard = ({ project }: Props) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const { currentIndex, nextSlide, prevSlide, goToSlide } = useCarousel({ length: project.images?.length || 0 });
-
-  const handleOpenModal = () => setIsModalOpen(true);
-  const handleCloseModal = () => setIsModalOpen(false);
+const ProjectCard = ({ project, isAnyModalOpen, onOpenModal }: Props) => {
+  const { currentIndex, nextSlide, prevSlide, goToSlide } = useCarousel({
+    length: project.images?.length || 0,
+    autoPlay: !isAnyModalOpen,
+    interval: 3000
+  });
 
   return (
-    <>
-      <Card className="group overflow-hidden flex flex-col h-full hover:border-blue-500/30 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-900/20">
-        <div 
-          className="relative h-48 overflow-hidden bg-slate-950 group"
-          onClick={handleOpenModal}
-        >
-          <Carousel 
-            media={project.images}
-            currentIndex={currentIndex}
-            onNext={nextSlide}
-            onPrev={prevSlide}
-            onGoTo={goToSlide}
-          />
+    <Card className="group overflow-hidden flex flex-col h-full hover:border-blue-500/30 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-900/20">
+      <div 
+        className="relative h-48 overflow-hidden bg-slate-950 group"
+        onClick={onOpenModal}
+      >
+        <Carousel 
+          media={project.images}
+          currentIndex={currentIndex}
+          onNext={nextSlide}
+          onPrev={prevSlide}
+          onGoTo={goToSlide}
+        />
+      </div>
+
+      <div className="p-6 flex flex-col grow">
+        <div className="flex flex-wrap gap-2 mb-3"> 
+          {project.concepts.map((c) => (
+            <Badge key={c} variant="primary">
+              {c}
+            </Badge>
+          ))}
         </div>
 
-        <div className="p-6 flex flex-col grow">
-          <div className="flex flex-wrap gap-2 mb-3"> 
-            {project.concepts.map((c) => (
-              <Badge key={c} variant="primary">
-                {c}
-              </Badge>
-            ))}
-          </div>
+        <h3 className="text-xl font-bold text-blue-300 mb-2 group-hover:text-blue-200 transition-colors">
+          {project.title}
+        </h3>
+        
+        <p className="text-gray-400 text-sm leading-relaxed mb-4 grow">
+          {project.description}
+        </p>
 
-          <h3 className="text-xl font-bold text-blue-300 mb-2 group-hover:text-blue-200 transition-colors">
-            {project.title}
-          </h3>
-          
-          <p className="text-gray-400 text-sm leading-relaxed mb-4 grow">
-            {project.description}
-          </p>
+        <div className="flex flex-wrap gap-2 mb-6">
+          {project.technologies.map((t) => (
+            <Badge key={t} variant="secondary">
+              {t}
+            </Badge>
+          ))}
+        </div>
 
-          <div className="flex flex-wrap gap-2 mb-6">
-            {project.technologies.map((t) => (
-              <Badge key={t} variant="secondary">
-                {t}
-              </Badge>
-            ))}
-          </div>
+        <div className="flex items-center justify-center gap-8 pt-4 border-t border-slate-700/50 mt-auto">
+          {project.repoUrl && (
+          <a 
+            href={project.repoUrl} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-sm text-slate-400 hover:text-white transition-colors group/link"
+          >
+            <FaGithub size={18} className="group-hover/link:text-white transition-colors" />
+            <span>Code</span>
+          </a>
+          )}
 
-          <div className="flex items-center justify-center gap-8 pt-4 border-t border-slate-700/50 mt-auto">
-            {project.repoUrl && (
+          {project.demoUrl && (
             <a 
-              href={project.repoUrl} 
+              href={project.demoUrl} 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-sm text-slate-400 hover:text-white transition-colors group/link"
+              className="flex items-center gap-2 text-sm text-blue-400 hover:text-blue-300 transition-colors group/link"
             >
-              <FaGithub size={18} className="group-hover/link:text-white transition-colors" />
-              <span>Code</span>
+              <FiExternalLink size={18} className="group-hover/link:text-blue-300 transition-colors" />
+              <span>Live Demo</span>
             </a>
-            )}
-
-            {project.demoUrl && (
-              <a 
-                href={project.demoUrl} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm text-blue-400 hover:text-blue-300 transition-colors group/link"
-              >
-                <FiExternalLink size={18} className="group-hover/link:text-blue-300 transition-colors" />
-                <span>Live Demo</span>
-              </a>
-            )}
-          </div>
+          )}
         </div>
-      </Card>
-
-      { isModalOpen && (
-        <ProjectCarouselModal 
-          isOpen={isModalOpen}
-          onClose={handleCloseModal}
-          images={project.images}
-          initialIndex={currentIndex}
-        />
-      )}
-    </>
+      </div>
+    </Card>
   );
 };
 
