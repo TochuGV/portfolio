@@ -106,7 +106,7 @@ export const techStack: TechCategory[] = [
   {
     name: "Databases",
     technologies: [
-      { name: "SQL Server", icon: "sqlserver" },
+      { name: "SQL Server", icon: "/tech/sql-server.svg" },
       { name: "PostgreSQL", icon: "postgres" }, // Hasta saber Supabase, se queda.
       { name: "MongoDB", icon: "mongodb" },
       { name: "Prisma", icon: "prisma" },
@@ -119,7 +119,7 @@ export const techStack: TechCategory[] = [
       { name: "Docker", icon: "docker" },
       { name: "Vercel", icon: "vercel" },
       { name: "GitHub Actions", icon: "githubactions" },
-      { name: "Render", icon: "render" },
+      { name: "Render", icon: "https://cdn.simpleicons.org/render/FFFFFF" },
       { name: "Azure DevOps", icon: "azure" }
     ]
   },
@@ -128,9 +128,9 @@ export const techStack: TechCategory[] = [
     technologies: [
       { name: "Git", icon: "git" },
       { name: "Postman", icon: "postman" },
-      { name: "Swagger", icon: "swagger" },
+      { name: "Swagger", icon: "/tech/swagger.svg" },
       { name: "Figma", icon: "figma" },
-      { name: "Trello", icon: "trello" }
+      { name: "Trello", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/trello/trello-plain.svg" }
     ]
   }
   //{ name: "React Native", icon: "reactnative" }, // Hasta 'EventGallery', no se escribe. Falta el logo.
