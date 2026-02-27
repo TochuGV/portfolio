@@ -13,7 +13,7 @@ export const projects: Project[] = [
   {
     id: 2,
     title: "node-socketio-chat",
-    images: ["/companies/yoizen.png", "/companies/wirsolut.png", "/companies/yoizen.png"],
+    images: ["/projects/node-socketio-chat/image1.png", "/projects/node-socketio-chat/image2.png"],
     description: "Real-time chat application with multiple settings using WebSockets...",
     concepts: ["Real-Time", "WebSockets"],
     technologies: ["JavaScript", "Node.js", "Express", "Socket.IO", "MongoDB", "Passport.js"],
