@@ -20,7 +20,7 @@ const ProjectCard = ({ project, isAnyModalOpen, onOpenModal }: Props) => {
   return (
     <Card className="group overflow-hidden flex flex-col h-full hover:border-blue-500/30 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-900/20">
       <div 
-        className="relative h-48 overflow-hidden bg-slate-950 group"
+        className="relative aspect-video overflow-hidden bg-slate-950 group"
         onClick={onOpenModal}
       >
         <Carousel 

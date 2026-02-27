@@ -4,9 +4,10 @@ interface Props {
   onNext: () => void;
   onPrev: () => void;
   onGoTo: (index: number) => void;
+  objectFit?: 'cover' | 'contain';
 }
 
-export const Carousel = ({ media, currentIndex, onNext, onPrev, onGoTo }: Props) => {
+export const Carousel = ({ media, currentIndex, onNext, onPrev, onGoTo, objectFit = "cover" }: Props) => {
   if (!media || media.length === 0) return null;
 
   const handlePrevClick = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -37,7 +38,9 @@ export const Carousel = ({ media, currentIndex, onNext, onPrev, onGoTo }: Props)
             key={index}
             src={item}
             alt={`Slide ${index + 1}`}
-            className="w-full h-full object-contain shrink-0"
+            className={`shrink-0 min-w-full h-full object-center ${
+              objectFit === 'contain' ? 'object-contain' : 'object-cover'
+            }`}
           />
         ))}
       </div>

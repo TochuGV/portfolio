@@ -32,6 +32,7 @@ const ProjectCarouselModal = ({ isOpen, onClose, images, initialIndex }: Props) 
           onNext={nextSlide}
           onPrev={prevSlide}
           onGoTo={goToSlide}
+          objectFit="contain"
         />
       </div>
     </div>
