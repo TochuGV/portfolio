@@ -23,7 +23,7 @@ export const projects: Project[] = [
   {
     id: 3,
     title: "Characters.API",
-    images: ["/companies/yoizen.png", "/companies/wirsolut.png", "/companies/yoizen.png"],
+    images: ["/projects/characters.api/image1.png", "/projects/characters.api/image2.png", "/projects/characters.api/image3.png", "/projects/characters.api/image4.png",],
     description: "RESTful API created to manage characters with authentication and advanced search...",
     concepts: ["REST API", "Architecture"],
     technologies: ["JavaScript", "Node.js", "Express", "Prisma", "SQL Server", "Redis", "Zod", "JWT", "Docker", "GitHub Actions"],
