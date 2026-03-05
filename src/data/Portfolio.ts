@@ -52,11 +52,12 @@ export const experience: Experience[] = [
       logo: "/companies/yoizen.png"
     }, 
     details: {
-      summary: "Development and maintenance for ySocial, an omnichannel platform for customer service management across social media and digital channels.",
+      summary: "Contributed to the development and evolution of ySocial, an omnichannel customer service platform.",
       achievements: [
-        "Developed new features focused on improving omnichannel interaction between users and agents within the platform.",
-        "Managed and optimized databases to ensure persistence and fluidity of real-time communications.",
-        "Enhanced user experience (UX) in social media integrations, achieving more efficient and direct service flows."
+        "Engineered end-to-end features to enhance the core functionality and user experience of the omnichannel platform.",
+        "Managed relational database structures to ensure the persistence and fluidity of real-time communications.",
+        "Optimized third-party social media integrations, streamlining message routing and management for customer service agents.",
+        "Collaborated within an agile team environment, contributing to continuous planning, delivery, and milestone tracking."  
       ]
     },
     technologies: ["C#", "Angular", "JavaScript", "SQL Server", "jQuery", "Node.js"]
@@ -71,12 +72,12 @@ export const experience: Experience[] = [
       logo: "/companies/wirsolut.png"
     },
     details: {
-      summary: "Development of a RESTful API for WirTrack, a web platform designed to optimize logistics management and security in freight transportation.",
+      summary: "Collaborated in a team to develop a RESTful API for WirTrack, a platform focused on logistics management optimization and security.",
       achievements: [
-        "Architected and developed specific endpoints for real-time logistics route registration and querying.",
-        "Designed data models and integrated with relational databases to ensure information integrity and consistency.",
-        "Applied robust development standards to build a secure, maintainable API ready for production environments."
-      ],
+        "Architected and implemented secure RESTful endpoints for real-time logistics route registration and querying.",
+        "Designed efficient relational data models to guarantee information integrity and consistency across the platform.",
+        "Enforced strict data validation and static typing standards to build a robust, predictable, and maintainable API."  
+      ]
     },
     technologies: ["TypeScript", "Node.js", "Express", "PostgreSQL", "TypeORM", "Zod", "Docker"]
   },
