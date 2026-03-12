@@ -1,12 +1,13 @@
-import type { FormHTMLAttributes } from "react";
+import type { FormHTMLAttributes, Ref } from "react";
 
 interface Props extends FormHTMLAttributes<HTMLFormElement> {
-  children: React.ReactNode;
+  ref?: Ref<HTMLFormElement>;
 }
 
-export const Form = ({ children, className = "", ...props}: Props) => {
+export const Form = ({ children, ref, className = "", ...props}: Props) => {
   return (
     <form
+      ref={ref}
       className={`space-y-6 ${className}`}
       {...props}
     >
