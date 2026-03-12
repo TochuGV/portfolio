@@ -1,13 +1,14 @@
-interface Props {
-  children: React.ReactNode;
-  className?: string;
-  onClick?: () => void;
-}
+import type { ButtonHTMLAttributes } from "react";
 
-export const Button = ({ children, className = "", onClick }: Props) => {
+type Props = ButtonHTMLAttributes<HTMLButtonElement>;
+
+export const Button = ({ children, className = "", type = "button", ...props }: Props) => {
   return (
-    <button onClick={onClick} className={className}>
+    <button type={type} className={className} {...props}>
       {children}
     </button>
   )
 }
+
+// Revisar 'className' para pasar estilos en común de los botones.
+// Si no son similares, eliminar atributo.

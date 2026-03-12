@@ -1,7 +1,7 @@
 import { useReducer, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { formReducer, buttonConfig } from './contact.machine';
-import { Form, Input, Label, Textarea } from "../ui"
+import { Button, Form, Input, Label, Textarea } from "../ui"
 
 export const ContactForm = () => {
   const formRef = useRef<HTMLFormElement>(null);
@@ -51,13 +51,15 @@ export const ContactForm = () => {
         <Textarea name="message" id="message" rows={5} required placeholder="Hello! I'd like to talk about..." />
       </div>
 
-      <button 
+      <Button 
         type="submit" 
         disabled={status === 'loading' || status === 'success'}
         className={`w-full py-3 rounded-lg transition-all duration-300 ${currentButton.className}`}
       >
         {currentButton.text}
-      </button>
+      </Button>
     </Form>
   );
 };
+
+// Revisar de mover a componentes cada 'FormInput', buscar nombre.
