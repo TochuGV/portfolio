@@ -5,20 +5,10 @@ interface Props {
   children: React.ReactNode;
 }
 
-const getNextTheme = (currentTheme: Theme): Theme => {
-  if (currentTheme === 'light') return 'dark';
-  if (currentTheme === 'dark') return 'system';
-  return 'light';
-}
-
 export const ThemeProvider = ({ children }: Props) => {
   const [theme, setTheme] = useState<Theme>(() => {
     return (localStorage.getItem('theme') as Theme) || 'system';
   });
-
-  const toggleTheme = () => {
-    setTheme(getNextTheme);
-  };
 
   useEffect(() => {
     const root = window.document.documentElement;
@@ -50,7 +40,7 @@ export const ThemeProvider = ({ children }: Props) => {
   }, [theme]);
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <ThemeContext.Provider value={{ theme, setTheme }}>
       {children}
     </ThemeContext.Provider>
   )

@@ -1,14 +1,16 @@
 import { useState, useEffect } from "react";
 import { Button, Link } from "../../ui";
 import { NavbarLink } from "./NavbarLink";
-import logoImage from '../../../assets/logo.png'
-import { useTheme } from "../../../context/ThemeContext";
-import { FiSun, FiMoon, FiMonitor, FiMenu, FiX } from "react-icons/fi"
+import { ThemeToggle } from "../../theme/ThemeToggle";
+import logoImage from '../../../assets/logo.png';
+import { FiMenu, FiX } from "react-icons/fi";
 
 export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const { theme, toggleTheme } = useTheme();
+
+  const toggleMenu = () => setIsOpen(prev => !prev); // Revisar esto.
+  const closeMenu = () => setIsOpen(false);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -58,33 +60,15 @@ export const Navbar = () => {
 
           <div className="hidden md:flex items-center gap-12">
             {renderNavLinks()}
-
-            <div className="flex items-center gap-4 ml-4">
-              <Button
-                onClick={toggleTheme}
-                className="p-2 rounded-full text-slate-400 hover:text-white hover:bg-slate-800 transition-all duration-300"
-                aria-label="Toggle theme"
-              >
-                {theme === 'light' && <FiSun size={20} />}
-                {theme === 'dark' && <FiMoon size={20} />}
-                {theme === 'system' && <FiMonitor size={20} />}
-              </Button>
+            <div className="flex items-center ml-4">
+              <ThemeToggle />
             </div>
           </div>
 
           <div className="md:hidden flex items-center gap-2 text-slate-300">
+            <ThemeToggle />
             <Button
-              onClick={toggleTheme}
-              className="p-2 rounded-full text-slate-400 hover:text-white hover:bg-slate-800 transition-all duration-300"
-              aria-label="Toggle theme"
-            >
-              {theme === 'light' && <FiSun size={20} />}
-              {theme === 'dark' && <FiMoon size={20} />}
-              {theme === 'system' && <FiMonitor size={20} />}
-            </Button>
-            
-            <Button
-              onClick={() => setIsOpen(!isOpen)}
+              onClick={toggleMenu}
               className="p-2 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
               aria-label="Open Menu"
             >
@@ -98,7 +82,7 @@ export const Navbar = () => {
         className={`fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-40 transition-opacity duration-300 md:hidden ${
           isOpen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
-        onClick={() => setIsOpen(false)} 
+        onClick={closeMenu} 
       />
       <div 
         className={`fixed top-0 right-0 h-full w-70 bg-white dark:bg-slate-900 border-l border-slate-200 dark:border-slate-800 shadow-2xl z-40 transform transition-transform duration-300 ease-in-out md:hidden flex flex-col pt-24 ${
