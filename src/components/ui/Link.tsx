@@ -1,24 +1,16 @@
-interface Props {
-  href: string;
-  children: React.ReactNode;
-  className?: string;
-  target?: "_blank" | "_self"
-  rel?: string;
-}
+import type { AnchorHTMLAttributes } from "react"
 
-export const Link = ({ 
-  href, 
-  children, 
-  className = "",
-  target = "_self",
-  rel = target === "_blank" ? "noopener noreferrer" : undefined
-}: Props) => {
+type Props = AnchorHTMLAttributes<HTMLAnchorElement>;
+
+export const Link = ({ children, className = "", target, rel, ...props }: Props) => {
+  const safeRel = target === "_blank" ? rel || "noopener noreferrer" : rel;
+  
   return (
     <a 
-      href={href}
       target={target}
-      rel={rel}
+      rel={safeRel}
       className={className}
+      {...props}
     >
       {children}
     </a>
