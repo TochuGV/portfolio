@@ -58,13 +58,6 @@ export const Navbar = () => {
               {theme === 'dark' && <FiMoon size={20} />}
               {theme === 'system' && <FiMonitor size={20} />}
             </Button>
-            <Link
-              href="/resume/CV_Tobías_Vallejos_ENG.pdf"
-              target="_blank"
-              className="px-4 py-2 border-2 text-slate-300 border-blue-600 rounded-lg hover:border-blue-700 hover:bg-blue-700 hover:shadow-[0_0_2rem] hover:shadow-blue-500/40 transition-all duration-300 font-medium"
-              >
-              Resume
-            </Link>
           </div>
         </div>
 

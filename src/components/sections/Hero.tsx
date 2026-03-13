@@ -23,19 +23,27 @@ export const Hero = () => {
             <div className="flex items-center gap-4 mb-8">
               <Link
                 href="#contact"
-                className="inline-flex items-center justify-center px-8 py-3 bg-blue-600 text-white border-2 border-blue-600 rounded-lg transition-all duration-300 hover:bg-blue-700 hover:border-blue-700 hover:shadow-[0_0_2rem] hover:shadow-blue-500/40 hover:-translate-y-1"
+                className="inline-flex items-center justify-center px-8 py-3 border-2 text-slate-300 font-medium bg-blue-600 border-blue-600 rounded-lg transition-all duration-300 hover:bg-blue-700 hover:border-blue-700 hover:shadow-[0_0_2rem] hover:shadow-blue-500/40 hover:-translate-y-1"
               >
                 Contact Me
               </Link>
               <Link
                 href="#projects"
-                className="inline-flex items-center justify-center px-8 py-3 border-2 border-blue-600 text-blue-400 rounded-lg transition-all duration-300 hover:bg-blue-600 hover:text-white hover:shadow-[0_0_2rem] hover:shadow-blue-500/40 hover:-translate-y-1"
+                className="inline-flex items-center justify-center px-8 py-3 border-2 text-blue-400 font-medium border-blue-600 rounded-lg transition-all duration-300 hover:bg-blue-600 hover:text-white hover:shadow-[0_0_2rem] hover:shadow-blue-500/40 hover:-translate-y-1"
               >
                 View Projects
               </Link>
+              
+              <Link
+                href="/resume/CV_Tobías_Vallejos_ENG.pdf"
+                target="_blank"
+                className="inline-flex items-center justify-center px-8 py-3 border-2 text-slate-300 font-medium bg-blue-600  border-blue-600 rounded-lg transition-all duration-300 hover:border-blue-700 hover:bg-blue-700 hover:shadow-[0_0_2rem] hover:shadow-blue-500/40 hover:-translate-y-1"
+              >
+                Resume
+              </Link>
             </div>
             
-            <div className="flex gap-5">
+            <div className="flex gap-4">
               <Link href="https://github.com/TochuGV" className="hover:scale-110 transition-transform">
                 <BrandIcon name="GitHub" icon="github" />
               </Link>
