@@ -14,8 +14,8 @@ export const Section = ({ id, title, children, className="", gradientDirection }
     : "bg-blue-100 dark:bg-slate-950"
   
   return (
-    <section id={id} className={`py-20 px-6 ${bgClass} ${className}`}>
-      <div className="max-w-400 mx-auto">
+    <section id={id} className={`py-20 px-6 overflow-hidden ${bgClass} ${className}`}>
+      <div className="max-w-240 w-full mx-auto">
         {title && (
           <h2 className="text-4xl font-bold mb-12 text-center text-blue-600 dark:text-blue-400">
             {title}

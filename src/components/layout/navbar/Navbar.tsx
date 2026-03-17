@@ -58,14 +58,14 @@ export const Navbar = () => {
             </div>
           </Link>
 
-          <div className="hidden md:flex items-center gap-12">
+          <div className="hidden lg:flex items-center gap-6 xl:gap-12">
             {renderNavLinks()}
             <div className="flex items-center ml-4">
               <ThemeToggle />
             </div>
           </div>
 
-          <div className="md:hidden flex items-center gap-2 text-slate-300">
+          <div className="lg:hidden flex items-center gap-2 text-slate-300">
             <ThemeToggle />
             <Button
               onClick={toggleMenu}
@@ -79,13 +79,13 @@ export const Navbar = () => {
       </nav>
 
       <div 
-        className={`fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-40 transition-opacity duration-300 md:hidden ${
+        className={`fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-40 transition-opacity duration-300 lg:hidden ${
           isOpen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
         onClick={closeMenu} 
       />
       <div 
-        className={`fixed top-0 right-0 h-full w-70 bg-white dark:bg-slate-900 border-l border-slate-200 dark:border-slate-800 shadow-2xl z-40 transform transition-transform duration-300 ease-in-out md:hidden flex flex-col pt-24 ${
+        className={`fixed top-0 right-0 h-full w-64 bg-white dark:bg-slate-900 border-l border-slate-200 dark:border-slate-800 shadow-2xl z-40 transform transition-transform duration-300 ease-in-out lg:hidden flex flex-col pt-24 ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
