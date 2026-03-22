@@ -1,5 +1,5 @@
 import { Shield, Eye, Anchor, Layers, Unlink } from "lucide-react"
-import { Card, Section } from "../ui"
+import { Card, Divider, Section } from "../ui"
 
 const concepts = [
   { label: "Decoupling", icon: Unlink },
@@ -30,11 +30,12 @@ export const AboutMe = () => {
               of parts.
             </p>
 
-            <div className="grid grid-cols-5 gap-3">
+            <Divider />
+            <div className="flex gap-3">
               {concepts.map(({ label, icon: Icon }) => (
                 <span
                   key={label}
-                  className="flex items-center justify-center gap-2 px-4 py-2 rounded-full border border-blue-900/50 bg-slate-800/50 text-sm text-blue-300"
+                  className="flex flex-1 items-center justify-center gap-2 px-4 py-2 rounded-full border border-blue-900/50 bg-slate-800/50 text-sm text-blue-300 whitespace-nowrap"
                 >
                   <Icon size={14} />
                   {label}
@@ -42,7 +43,8 @@ export const AboutMe = () => {
               ))}
             </div>
           </div>
-
+          
+          <Divider direction="vertical" />
           <div className="flex flex-col gap-4 md:min-w-56 justify-center">
             {status.map(({ label, active }) => (
               <div key={label} className="flex items-center gap-3 text-gray-300 text-base">

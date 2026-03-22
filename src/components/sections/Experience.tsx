@@ -1,4 +1,4 @@
-import { Badge, BrandIcon, Card, Section, Timeline, TimelineItem } from "../ui";
+import { Badge, BrandIcon, Card, Divider, Section, Timeline, TimelineItem } from "../ui";
 import { experience } from "../../data/Portfolio";
 
 export const Experience = () => {
@@ -55,8 +55,9 @@ export const Experience = () => {
                     </li>
                   ))}
                 </ul>
-
-                <div className="flex flex-wrap gap-2 pt-4 border-t border-slate-700/50">
+                
+                <Divider />
+                <div className="flex flex-wrap gap-2 pt-4">
                   {exp.technologies.map((t) => (
                     <Badge key={t} variant="secondary">
                       {t}
